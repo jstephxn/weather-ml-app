@@ -9,7 +9,7 @@ class TestAppSmoke(unittest.TestCase):
     # Test a success in running the application
     def test_prediction_route_success(self):
         response = self.client.get('/')
-        # Check HTTP 200 like in the lab
+        # Check HTTP 200 
         self.assertEqual(response.status_code, 200)
 
     # Test that a form is rendered
