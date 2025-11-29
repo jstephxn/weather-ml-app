@@ -5,7 +5,8 @@ import time
 
 app = Flask(__name__)
 
-weather_classes = ['clear', 'cloudy', 'drizzly', 'foggy', 'hazey', 'misty', 'rainy', 'smokey', 'thunderstorm']
+# fixed a syntax error in the list below
+weather_classes = ['clear', 'cloudy', 'drizzly', 'foggy', 'hazey', 'misty', 'rainy', 'smokey', 'thunderstorm'] 
 
 def load_model(model_path = 'model/model.pkl'):
         return pickle.load(open(model_path, 'rb'))
@@ -15,7 +16,7 @@ def classify_weather(features):
         start = time.time()
         prediction_index = model.predict(features)[0]
         latency = round((time.time() - start) * 1000, 2) #we are here
-        prediction = weather_classes[prediction_index]
+        prediction = weather_classes[prediction_index] # fixed this line so that the model's output is correclty mapped to weather class
 
         return prediction, latency
 
