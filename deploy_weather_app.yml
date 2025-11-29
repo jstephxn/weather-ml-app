@@ -4,7 +4,7 @@
   become: yes
 
   vars:
-    dockerhub_image: "10scott01/weather-ml-app:latest"
+    dockerhub_image: "10cscott01/weather-ml-app:latest"
     user_home: "/home/ubuntu"
 
   tasks:
