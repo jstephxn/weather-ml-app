@@ -26,8 +26,10 @@ jobs:
           pip install pytest
 
       - name: Run tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: |
-          pytest tests/
+          python -m pytest tests/
 
       - name: Build Docker image (no push)
         run: |
