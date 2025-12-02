@@ -2,13 +2,13 @@ name: CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main ]
 
 jobs:
   build-and-test:
-    runs-on: [self-hosted, build]   # IMPORTANT: uses the build server
+    runs-on: [self-hosted ]  
 
     steps:
       - name: Checkout repository
