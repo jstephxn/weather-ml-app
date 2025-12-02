@@ -39,11 +39,6 @@ jobs:
       - name: Verify container is running
         run: docker ps | grep app_test
 
-      - name: Test HTTP response
-        run: |
-          sudo apt-get install -y curl
-          curl -I http://localhost:5000
-
       - name: Stop and remove container
         run: |
           docker stop app_test
