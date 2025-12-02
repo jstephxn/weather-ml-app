@@ -23,13 +23,14 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: 5000
+              port: 5001
             initialDelaySeconds: 5
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /
-              port: 5000
+              port: 5001
             initialDelaySeconds: 3
             periodSeconds: 5
+
 
